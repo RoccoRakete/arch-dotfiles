@@ -1,0 +1,18 @@
+@import "./catppuccin-mocha.scss";
+
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#battery,
+#tray,
+#network,
+#pulseaudio,
+#bluetooth,
+#custom-notification,
+#custom-power,
+#clock,
+#custom-weather {
+  background-color: transparentize($color: $text, $amount: 0.75);
+  color: $color-fg;
+}

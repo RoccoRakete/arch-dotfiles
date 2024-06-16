@@ -1,0 +1,115 @@
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#battery,
+#tray,
+#network,
+#pulseaudio,
+#bluetooth,
+#custom-notification,
+#custom-power,
+#clock,
+#custom-weather {
+  background-color: rgba(205, 214, 244, 0.25);
+  color: #11111b; }
+
+* {
+  padding: 0;
+  margin: 0;
+  font-weight: bolder; }
+
+window#waybar {
+  font-size: 13pt;
+  /*border-radius: $radii;
+   */
+  background: rgba(17, 17, 27, 0.8); }
+
+#clock,
+#custom-weather,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#network.speed,
+#bluetooth,
+#pulseaudio,
+#custom-notification {
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-top: 4.5px;
+  margin-bottom: 4.5px; }
+
+#clock,
+#network {
+  padding-left: 6px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px; }
+
+#clock,
+#backlight,
+#custom-notification {
+  margin-right: 6px;
+  padding-right: 6px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px; }
+
+#cpu {
+  font-size: 1.1em;
+  font-weight: bolder;
+  color: #fab387;
+  transition: 400ms;
+  animation: ws_normal 20s ease-out 10; }
+
+#bluetooth.connected {
+  font-size: 1.15em;
+  color: #5895f8; }
+
+#pulseaudio {
+  padding-left: 0; }
+
+#image,
+#workspaces,
+#battery,
+#tray,
+#custom-power {
+  padding-left: 4.5px;
+  padding-right: 4.5px;
+  margin-top: 4.5px;
+  margin-bottom: 4.5px;
+  margin-right: 6px;
+  border-radius: 5px; }
+
+#workspaces {
+  padding-left: 0; }
+
+#workspaces button {
+  font-size: 0;
+  min-width: 12.35pt;
+  min-height: 12.35pt;
+  margin: 4.5px;
+  margin-top: 4.5px;
+  margin-bottom: 4.5px;
+  border-radius: 30px;
+  background-color: #eeeeec;
+  transition: 100ms;
+  animation: ws_normal 20s ease-out 10; }
+
+#workspaces button.empty {
+  background-color: #77767b; }
+
+#workspaces button.active {
+  min-width: 26pt;
+  background-color: #71a4f9;
+  transition: 100ms; }
+
+#battery.full {
+  font-size: 1.15em; }
+
+#custom-power {
+  color: #ee5d85;
+  margin-right: 4.5px; }
+
+.modules-left {
+  margin-left: 3px; }
