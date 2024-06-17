@@ -106,12 +106,9 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # For a full list of active aliases, run `alias`.
 #
 # Aliases
-alias install="sudo pacman -S"
-alias instally="yay -S"
-alias purge="sudo pacman -Rns"
-alias remove="sudo pacman -R"
-alias upgrade="sudo pacman -Syu"
+alias pcm="sudo pacman"
 alias ll="ls -lah"
+alias rm="rm -i"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -124,7 +121,7 @@ SAVEHIST=10000
 zstyle :compinstall filename '/home/martin/.zshrc'
 
 autoload -Uz compinit
-#compinit
+compinit
 clear
-neofetch
+nerdfetch
 # End of lines added by compinstall

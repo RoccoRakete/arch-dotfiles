@@ -23,7 +23,7 @@ window#waybar {
   font-size: 13pt;
   /*border-radius: $radii;
    */
-  background: rgba(17, 17, 27, 0.8); }
+  background: #11111b; }
 
 #clock,
 #custom-weather,
