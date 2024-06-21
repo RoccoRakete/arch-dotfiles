@@ -215,7 +215,7 @@
 	},
 	"custom/power": {
 		"format": "",
-		"on-click": "wlogout -b 5 -c 0 -r 0 -T 0 -B 0",
+		"on-click": "wlogout -p layer-shell",
 		"interval": 86400, // once every day
 		"tooltip": true
 	}
