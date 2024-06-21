@@ -22,6 +22,7 @@ return {
         "pylsp",
         "rust_analyzer",
         "somesass_ls",
+        "pylyzer",
         -- add more arguments for adding more language servers
       },
     },
@@ -43,6 +44,7 @@ return {
         "prettiererd",
         "rustup",
         "shfmt",
+        "black",
         -- add more arguments for adding more null-ls sources
       },
     },

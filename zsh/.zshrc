@@ -107,6 +107,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 #
 # Aliases
 alias pcm="sudo pacman"
+alias vi="nvim"
 alias ll="ls -lah"
 alias rm="rm -i"
 
