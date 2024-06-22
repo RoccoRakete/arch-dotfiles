@@ -14,7 +14,7 @@ return {
       },
       g = { -- configure vim.g variables
         -- configure scaling
-        neovide_scale_factor = 1.0,
+        neovide_scale_factor = 0.6,
         -- configure padding
         neovide_padding_top = 0,
         neovide_padding_bottom = 0,
