@@ -1,0 +1,44 @@
+* {
+  font: LiterationSans Nerd Font;
+  font-weight: bolder;
+  font-size: 16pt;
+  color: #cdd6f4;
+  background: transparent;
+}
+
+#window {
+  background: #1e1e2e;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  border: 3px solid #b4befe;
+}
+
+#input {
+  background-color: #45475a;
+  padding: 5px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+#outer-box {
+  padding: 20px;
+}
+
+#img {
+  margin-right: 6px;
+}
+
+#entry {
+  padding: 10px;
+}
+
+#entry:selected {
+  background-color: #45475a;
+  border: 0px transparent;
+}
+
+#text {
+  margin: 2px;
+}

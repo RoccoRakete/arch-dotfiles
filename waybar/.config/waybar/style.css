@@ -3,12 +3,14 @@
 #temperature,
 #backlight,
 #battery,
+#power-profiles-daemon,
 #tray,
 #network,
 #pulseaudio,
 #bluetooth,
 #custom-notification,
 #custom-power,
+#custom-updates,
 #clock,
 #custom-weather {
   background-color: rgba(205, 214, 244, 0.25);
@@ -31,6 +33,10 @@ window#waybar {
 #memory,
 #temperature,
 #backlight,
+#battery,
+#tray,
+#power-profiles-daemon,
+#custom-updates,
 #network,
 #network.speed,
 #bluetooth,
@@ -42,13 +48,17 @@ window#waybar {
   margin-bottom: 4.5px; }
 
 #clock,
-#network {
+#network,
+#battery,
+#tray {
   padding-left: 6px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px; }
 
 #clock,
 #backlight,
+#power-profiles-daemon,
+#custom-updates,
 #custom-notification {
   margin-right: 6px;
   padding-right: 6px;
@@ -71,8 +81,6 @@ window#waybar {
 
 #image,
 #workspaces,
-#battery,
-#tray,
 #custom-power {
   padding-left: 4.5px;
   padding-right: 4.5px;

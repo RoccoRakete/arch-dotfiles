@@ -23,6 +23,8 @@ return {
         "rust_analyzer",
         "somesass_ls",
         "pylyzer",
+        "tsserver",
+        --"hyprls",
         -- add more arguments for adding more language servers
       },
     },

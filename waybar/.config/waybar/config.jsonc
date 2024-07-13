@@ -1,3 +1,16 @@
+//////////////////////////////////////////////////////////
+//                                                      //
+// ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗   //
+// ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗  //
+// ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝  //
+// ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗  //
+// ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║  //
+//  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝  //
+//                                                      //
+//////////////////////////////////////////////////////////
+//
+//
+//
 {
 	"spacing": 0,
 	"margin-left": 0,
@@ -20,7 +33,9 @@
 		"cpu",
 		"backlight",
 		"battery",
+		"power-profiles-daemon",
 		"tray",
+		"custom/updates",
 		"network",
 		"bluetooth",
 		"pulseaudio",
@@ -67,9 +82,9 @@
 		}
 	},
 	"clock": {
-		"format": "{:%a. <span rise=\"1.5pt\">|</span> %H:%M<span rise=\"1.5pt\"></span>}",
+		"format": "{:%a.⏽%H:%M}",
 		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"format-alt": "{:%a. %d.%m.%y <span rise=\"1.5pt\">|</span> %H:%M <span rise=\"1.5pt\">|</span>}"
+		"format-alt": "{:%a. %d.%m.%y <span rise=\"1.5pt\">|</span> %H:%M}"
 	},
 	"custom/weather": {
 		"exec": "${HOME}/.config/waybar/scripts/get_weather.sh",
@@ -145,6 +160,29 @@
 			"<span foreground=\"#a6e3a1\">󰁹</span>"
 		],
 		"interval": 1
+	},
+	"power-profiles-daemon": {
+		"format": "{icon}",
+		"tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+		"tooltip": false,
+		"format-icons": {
+			"default": "",
+			"performance": "",
+			"balanced": "",
+			"power-saver": ""
+		}
+	},
+	"custom/updates": {
+		"format": "{icon}",
+		"format-alt": "{icon}{}",
+		"return-type": "json",
+		"format-icons": {
+			"has-updates": "󱍷",
+			"updated": "󰂪"
+		},
+		"on-click-right": "kitty --title kitty_float yay",
+		"exec-if": "which waybar-module-pacman-updates",
+		"exec": "waybar-module-pacman-updates  --interval-seconds 5 --network-interval-seconds 300"
 	},
 	"tray": {
 		"spacing": 6

@@ -21,6 +21,10 @@ window#waybar {
 #memory,
 #temperature,
 #backlight,
+#battery,
+#tray,
+#power-profiles-daemon,
+#custom-updates,
 #network,
 #network.speed,
 #bluetooth,
@@ -33,7 +37,9 @@ window#waybar {
 }
 
 #clock,
-#network {
+#network,
+#battery,
+#tray {
 	padding-left: $spacing*2;
 	border-top-left-radius: $radii/2;
 	border-bottom-left-radius: $radii/2;
@@ -41,6 +47,8 @@ window#waybar {
 
 #clock,
 #backlight,
+#power-profiles-daemon,
+#custom-updates,
 #custom-notification {
 	margin-right: $spacing*2;
 	padding-right: $spacing*2;
@@ -67,8 +75,6 @@ window#waybar {
 
 #image,
 #workspaces,
-#battery,
-#tray,
 #custom-power {
 	padding-left: $spacing*1.5;
 	padding-right: $spacing*1.5;

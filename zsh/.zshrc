@@ -108,8 +108,11 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Aliases
 alias pcm="sudo pacman"
 alias vi="nvim"
-alias ll="ls -lah"
+#alias ll="ls -lah"
 alias rm="rm -i"
+alias ll="eza -loah --icons=always --no-permissions --git"
+
+export TERM=kitty
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
