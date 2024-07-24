@@ -2,19 +2,25 @@
 #memory,
 #temperature,
 #backlight,
-#battery,
-#power-profiles-daemon,
-#tray,
 #network,
 #pulseaudio,
 #bluetooth,
 #custom-notification,
+#battery,
+#tray,
 #custom-power,
-#custom-updates,
-#clock,
-#custom-weather {
-  background-color: rgba(205, 214, 244, 0.25);
-  color: #11111b; }
+#power-profiles-daemon,
+#custom-updates {
+  background-color: #353535; }
+
+#network {
+  color: #9141ac; }
+
+#pulseaudio {
+  color: #33d17a; }
+
+#custom-notification {
+  color: #ff7800; }
 
 * {
   padding: 0;
@@ -23,31 +29,26 @@
 
 window#waybar {
   font-size: 13pt;
-  /*border-radius: $radii;
-   */
-  background: #11111b; }
+  background: #171717;
+  box-shadow: inset -2px -2px 5px 1px rgba(0, 0, 0, 0.4), 2px 2px 5px 1px rgba(0, 0, 0, 0.4) inset; }
 
-#clock,
-#custom-weather,
 #cpu,
 #memory,
 #temperature,
-#backlight,
 #battery,
-#tray,
-#power-profiles-daemon,
-#custom-updates,
+#backlight,
 #network,
-#network.speed,
 #bluetooth,
 #pulseaudio,
-#custom-notification {
+#custom-notification,
+#power-profiles-daemon,
+#custom-updates,
+#tray {
   padding-left: 3px;
   padding-right: 3px;
-  margin-top: 4.5px;
-  margin-bottom: 4.5px; }
+  margin-top: 3px;
+  margin-bottom: 3px; }
 
-#clock,
 #network,
 #battery,
 #tray {
@@ -55,11 +56,10 @@ window#waybar {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px; }
 
-#clock,
-#backlight,
 #power-profiles-daemon,
-#custom-updates,
-#custom-notification {
+#custom-notification,
+#cpu,
+#custom-updates {
   margin-right: 6px;
   padding-right: 6px;
   border-top-right-radius: 5px;
@@ -68,37 +68,33 @@ window#waybar {
 #cpu {
   font-size: 1.1em;
   font-weight: bolder;
-  color: #fab387;
+  color: #ff7800;
   transition: 400ms;
   animation: ws_normal 20s ease-out 10; }
 
 #bluetooth.connected {
   font-size: 1.15em;
-  color: #5895f8; }
+  color: #1b6acb; }
 
 #pulseaudio {
   padding-left: 0; }
 
 #image,
 #workspaces,
+#clock,
 #custom-power {
-  padding-left: 4.5px;
-  padding-right: 4.5px;
-  margin-top: 4.5px;
-  margin-bottom: 4.5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
   margin-right: 6px;
   border-radius: 5px; }
 
-#workspaces {
-  padding-left: 0; }
-
 #workspaces button {
   font-size: 0;
-  min-width: 12.35pt;
-  min-height: 12.35pt;
+  min-width: 11.05pt;
+  min-height: 11.05pt;
   margin: 4.5px;
-  margin-top: 4.5px;
-  margin-bottom: 4.5px;
   border-radius: 30px;
   background-color: #eeeeec;
   transition: 100ms;
@@ -109,15 +105,15 @@ window#waybar {
 
 #workspaces button.active {
   min-width: 26pt;
-  background-color: #71a4f9;
+  background-color: #3584e4;
   transition: 100ms; }
 
 #battery.full {
   font-size: 1.15em; }
 
 #custom-power {
-  color: #ee5d85;
-  margin-right: 4.5px; }
+  color: #e01b24;
+  margin-right: 3px; }
 
 .modules-left {
   margin-left: 3px; }

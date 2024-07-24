@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
-# Catppuccin-Mocha
+# Adwaita
 
-sassc $HOME/.config/swaync/style-catppuccin-mocha.scss $HOME/.config/swaync/style.css
+sassc $HOME/.config/swaync/style-adwaita.scss $HOME/.config/swaync/style.css
 
 swaync-client -R
 swaync-client -rs

@@ -30,8 +30,8 @@
 		"network#speed",
 		"memory",
 		"temperature",
-		"cpu",
 		"backlight",
+		"cpu",
 		"battery",
 		"power-profiles-daemon",
 		"tray",
@@ -111,18 +111,18 @@
 	},
 	"memory": {
 		"tooltip": false,
-		"format": "  {used:.1f} GiB"
+		"format": "<span foreground=\"#77767b\"></span>  {used:.1f} GiB"
 	},
 	"temperature": {
 		"tooltip": false,
 		"thermal-zone": 6,
 		"critical-threshold": 90,
-		"format": "{temperatureC}°C",
+		"format": "<span foreground=\"#77767b\"></span>{temperatureC}°C",
 		"interval": 1
 	},
 	"backlight": {
 		"tooltip": false,
-		"format": "{icon}{percent}%",
+		"format": "<span foreground=\"#77767b\">{icon}</span> {percent}%",
 		"format-icons": [
 			"",
 			"",
@@ -147,34 +147,34 @@
 		"format-plugged": "<span foreground=\"#2A995C\">󱐋</span>{capacity}%",
 		"format-alt": "{icon} {capacity}%",
 		"format-icons": [
-			"<span foreground=\"#f38ba8\">󰂎</span>",
-			"<span foreground=\"#f38ba8\">󰁺</span>",
-			"<span foreground=\"#fab387\">󰁻</span>",
-			"<span foreground=\"#fab387\">󰁼</span>",
-			"<span foreground=\"#f9e2af\">󰁽</span>",
-			"<span foreground=\"#f9e2af\">󰁾</span>",
-			"<span foreground=\"#f9e2af\">󰁿</span>",
-			"<span foreground=\"#a6e3a1\">󰂀</span>",
-			"<span foreground=\"#a6e3a1\">󰂁</span>",
-			"<span foreground=\"#a6e3a1\">󰂂</span>",
-			"<span foreground=\"#a6e3a1\">󰁹</span>"
+			"<span foreground=\"#e01b24\">󰂎</span>",
+			"<span foreground=\"#e01b24\">󰁺</span>",
+			"<span foreground=\"#ff7800\">󰁻</span>",
+			"<span foreground=\"#ff7800\">󰁼</span>",
+			"<span foreground=\"#f6d32d\">󰁽</span>",
+			"<span foreground=\"#f6d32d\">󰁾</span>",
+			"<span foreground=\"#f6d32d\">󰁿</span>",
+			"<span foreground=\"#33d17a\">󰂀</span>",
+			"<span foreground=\"#33d17a\">󰂁</span>",
+			"<span foreground=\"#33d17a\">󰂂</span>",
+			"<span foreground=\"#33d17a\">󰁹</span>"
 		],
 		"interval": 1
 	},
 	"power-profiles-daemon": {
-		"format": "{icon}",
+		"format": " {icon}",
 		"tooltip-format": "Power profile: {profile}\nDriver: {driver}",
 		"tooltip": false,
 		"format-icons": {
-			"default": "",
-			"performance": "",
-			"balanced": "",
-			"power-saver": ""
+			"default": "<span foreground=\"#e01b24\"></span>",
+			"performance": "<span foreground=\"#e01b24\"></span>",
+			"balanced": "<span foreground=\"#3584e4\"></span>",
+			"power-saver": "<span foreground=\"#33d17a\"></span>"
 		}
 	},
 	"custom/updates": {
-		"format": "{icon}",
-		"format-alt": "{icon}{}",
+		"format": "<span foreground=\"#77767b\">{icon}</span>",
+		"format-alt": "<span foreground=\"#77767b\">{icon}</span> {}",
 		"return-type": "json",
 		"format-icons": {
 			"has-updates": "󱍷",
@@ -196,7 +196,7 @@
 		"on-click": "swaync-client -t -sw"
 	},
 	"network#speed": {
-		"format": "<span line_height=\"0.75\" size=\"9pt\"> {bandwidthUpBytes}\n {bandwidthDownBytes}</span>",
+		"format": "<span line_height=\"0.75\" color=\"#ffffff\" size=\"9pt\"><span color=\"#77767b\"></span> {bandwidthUpBytes}\n<span color=\"#77767b\"></span> {bandwidthDownBytes}</span>",
 		"interval": 1
 	},
 	"bluetooth": {
@@ -213,7 +213,7 @@
 		"format-bluetooth": "{icon} {format_source}",
 		"format-bluetooth-muted": " {icon} {format_source}",
 		"format-muted": "󰸈 {format_source}",
-		"format-source": "",
+		"format-source": "<span color=\"#f6d32d\">  </span>",
 		"format-source-muted": "",
 		"format-icons": {
 			"headphone": "",

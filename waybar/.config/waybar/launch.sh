@@ -17,10 +17,10 @@ while ! is_swww_daemon_running; do
 	sleep 1
 done
 
-swww img ~/.config/backgrounds/mocha-mountains.png
+swww img ~/.config/backgrounds/minimal_landscape.jpg
 
 pkill waybar
 
-sassc $HOME/.config/waybar/style-catppuccin-mocha.scss $HOME/.config/waybar/style.css
+sassc $HOME/.config/waybar/style-adwaita.scss $HOME/.config/waybar/style.css
 
 waybar

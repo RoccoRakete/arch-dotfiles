@@ -1,0 +1,29 @@
+@import "./adwaita.scss";
+
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#bluetooth,
+#custom-notification,
+#battery,
+#tray,
+#custom-power,
+#power-profiles-daemon,
+#custom-updates {
+  background-color: $bg-color;
+}
+
+#network {
+  color: $purple;
+}
+
+#pulseaudio {
+  color: $green;
+}
+
+#custom-notification {
+  color: $orange;
+}

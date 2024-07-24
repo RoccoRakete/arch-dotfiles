@@ -1,0 +1,29 @@
+{
+    "label": "lock",
+    "action": "hyprlock",
+}
+
+{
+    "label": "hibernate",
+    "action": "systemctl hibernate",
+}
+
+{
+    "label": "logout",
+    "action": "loginctl kill-user $(whoami)",
+}
+
+{
+    "label": "shutdown",
+    "action": "shutdown now",
+}
+
+{
+    "label": "suspend",
+    "action": "loginctl suspend",
+}
+
+{
+    "label": "reboot",
+    "action": "reboot",
+}
