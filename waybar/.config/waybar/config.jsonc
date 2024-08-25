@@ -162,7 +162,7 @@
 		"interval": 1
 	},
 	"power-profiles-daemon": {
-		"format": " {icon}",
+		"format": "{icon}",
 		"tooltip-format": "Power profile: {profile}\nDriver: {driver}",
 		"tooltip": false,
 		"format-icons": {
@@ -214,7 +214,7 @@
 		"format-bluetooth-muted": " {icon} {format_source}",
 		"format-muted": "󰸈 {format_source}",
 		"format-source": "<span color=\"#f6d32d\">  </span>",
-		"format-source-muted": "",
+		"format-source-muted": "<span color=\"#f6d32d\">  </span>",
 		"format-icons": {
 			"headphone": "",
 			"hands-free": "",
