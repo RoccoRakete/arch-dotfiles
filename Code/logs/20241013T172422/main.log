@@ -1,0 +1,20 @@
+2024-10-13 17:24:22.324 [info] update#setState idle
+2024-10-13 17:24:52.327 [info] update#setState checking for updates
+2024-10-13 17:24:52.368 [info] update#setState idle
+2024-10-13 18:24:52.352 [info] update#setState checking for updates
+2024-10-13 18:24:52.669 [info] update#setState idle
+2024-10-13 19:57:54.717 [info] update#setState checking for updates
+2024-10-13 19:57:55.031 [info] update#setState idle
+2024-10-13 20:57:54.739 [info] update#setState checking for updates
+2024-10-13 20:57:54.920 [info] update#setState idle
+2024-10-13 21:57:54.765 [info] update#setState checking for updates
+2024-10-13 21:57:54.953 [info] update#setState idle
+2024-10-13 23:04:02.779 [info] update#setState checking for updates
+2024-10-13 23:04:02.982 [info] update#setState idle
+2024-10-14 00:04:03.694 [info] update#setState checking for updates
+2024-10-14 00:04:03.881 [info] update#setState idle
+2024-10-14 01:04:03.711 [info] update#setState checking for updates
+2024-10-14 01:04:04.192 [info] update#setState idle
+2024-10-14 02:04:03.730 [info] update#setState checking for updates
+2024-10-14 02:04:03.909 [info] update#setState idle
+2024-10-14 03:03:57.915 [error] [UtilityProcess type: shared-process, pid: 6592]: crashed with code 15 and reason 'killed'

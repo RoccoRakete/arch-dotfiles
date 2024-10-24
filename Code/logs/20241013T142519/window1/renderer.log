@@ -1,0 +1,5 @@
+2024-10-13 14:25:20.324 [info] Started local extension host with pid 14031.
+2024-10-13 14:25:20.690 [warning] Overwriting /home/martin/.vscode/extensions/fireblast.hyprlang-vscode-0.0.1 with Workspace Extension /home/martin/.vscode/extensions/fireblast.hyprlang-vscode-0.0.1.
+2024-10-13 14:25:23.073 [info] [perf] Render performance baseline is 36ms
+2024-10-13 15:34:37.215 [info] Started local extension host with pid 24103.
+2024-10-13 16:04:38.291 [error] [network] #25: https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery - error POST Canceled

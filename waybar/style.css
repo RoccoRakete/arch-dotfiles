@@ -1,0 +1,123 @@
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#bluetooth,
+#custom-notification,
+#battery,
+#tray,
+#custom-power,
+#power-profiles-daemon,
+#idle_inhibitor,
+#custom-updates {
+  background-color: #141414; }
+
+#network {
+  color: #9141ac; }
+
+#pulseaudio {
+  color: #33d17a; }
+
+#idle_inhibitor.activated {
+  color: #e01b24; }
+
+#idle_inhibitor.deactivated {
+  color: #3584e4; }
+
+#custom-notification {
+  color: #ff7800; }
+
+* {
+  padding: 0;
+  margin: 0;
+  font-weight: bolder; }
+
+window#waybar {
+  font-size: 13pt;
+  background: #070707;
+  box-shadow: inset -2px -2px 5px 1px rgba(0, 0, 0, 0.4), 2px 2px 5px 1px rgba(0, 0, 0, 0.4) inset; }
+
+#memory,
+#temperature,
+#battery,
+#backlight,
+#network,
+#bluetooth,
+#pulseaudio,
+#custom-notification,
+#power-profiles-daemon,
+#idle_inhibitor,
+#custom-updates,
+#tray {
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px; }
+
+#network,
+#battery,
+#tray {
+  padding-left: 6px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px; }
+
+#backlight,
+#idle_inhibitor,
+#custom-notification,
+#tray,
+#custom-updates {
+  margin-right: 6px;
+  padding-right: 6px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px; }
+
+#bluetooth.connected {
+  font-size: 1.15em;
+  color: #1b6acb; }
+
+#pulseaudio {
+  padding-left: 0; }
+
+#image,
+#workspaces,
+#clock,
+#custom-power {
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: 6px;
+  border-radius: 5px; }
+
+#image {
+  margin-right: 3px; }
+
+#workspaces button {
+  font-size: 0;
+  min-width: 11.05pt;
+  min-height: 11.05pt;
+  margin: 4.5px;
+  border-radius: 30px;
+  background-color: #eeeeec;
+  transition: 100ms;
+  animation: ws_normal 20s ease-out 10; }
+
+#workspaces button.empty {
+  background-color: #77767b; }
+
+#workspaces button.active {
+  min-width: 26pt;
+  background-color: #3584e4;
+  transition: 100ms; }
+
+#battery.full {
+  font-size: 1.15em; }
+
+#custom-power {
+  color: #e01b24;
+  margin-right: 3px; }
+
+.modules-left {
+  margin-left: 3px; }

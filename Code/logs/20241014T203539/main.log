@@ -1,0 +1,14 @@
+2024-10-14 20:35:39.500 [info] update#setState idle
+2024-10-14 20:36:09.501 [info] update#setState checking for updates
+2024-10-14 20:36:09.621 [info] update#setState idle
+2024-10-14 21:36:09.524 [info] update#setState checking for updates
+2024-10-14 21:36:09.822 [info] update#setState idle
+2024-10-14 22:38:53.573 [info] update#setState checking for updates
+2024-10-14 22:38:54.022 [info] update#setState idle
+2024-10-14 23:38:54.135 [info] update#setState checking for updates
+2024-10-14 23:38:54.482 [info] update#setState idle
+2024-10-15 00:38:54.158 [info] update#setState checking for updates
+2024-10-15 00:38:54.583 [info] update#setState idle
+2024-10-15 01:38:54.181 [info] update#setState checking for updates
+2024-10-15 01:38:54.494 [info] update#setState idle
+2024-10-15 02:15:29.030 [info] Extension host with pid 27721 exited with code: 18446744072077877000, signal: unknown.

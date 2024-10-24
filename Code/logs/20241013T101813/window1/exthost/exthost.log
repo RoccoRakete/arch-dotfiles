@@ -1,0 +1,22 @@
+2024-10-13 10:18:14.082 [info] Extension host with pid 4496 started
+2024-10-13 10:18:14.082 [info] Skipping acquiring lock for /home/martin/.config/Code/User/workspaceStorage/8c0231f4d00189c2a131f4b3596659d1.
+2024-10-13 10:18:14.227 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-10-13 10:18:14.242 [info] ExtensionService#_doActivateExtension ewen-lbh.vscode-hyprls, startup: false, activationEvent: 'onLanguage:hyprlang'
+2024-10-13 10:18:14.321 [info] ExtensionService#_doActivateExtension fireblast.hyprlang-vscode, startup: false, activationEvent: 'onLanguage:hyprlang'
+2024-10-13 10:18:14.394 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-10-13 10:18:14.425 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-10-13 10:18:14.485 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-10-13 10:18:14.610 [info] ExtensionService#_doActivateExtension fill-labs.dependi, startup: true, activationEvent: 'workspaceContains:**/Cargo.toml,**/go.mod,**/package.json,**/composer.json,**/requirements.txt,**/pyproject.toml'
+2024-10-13 10:18:21.371 [info] Not activating extension 'rust-lang.rust-analyzer': Timed out while searching for 'workspaceContains' pattern */Cargo.toml,*/rust-project.json,*/.rust-project.json
+2024-10-13 10:18:21.374 [info] Eager extensions activated
+2024-10-13 10:18:21.391 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-10-13 10:18:21.394 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-10-13 10:18:21.424 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2024-10-13 10:18:21.518 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-10-13 10:18:21.542 [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker, startup: false, activationEvent: 'onStartupFinished'
+2024-10-13 10:18:21.651 [info] ExtensionService#_doActivateExtension vadimcn.vscode-lldb, startup: false, activationEvent: 'onStartupFinished'
+2024-10-13 13:23:14.012 [info] ExtensionService#_doActivateExtension vscode.css-language-features, startup: false, activationEvent: 'onLanguage:scss'
+2024-10-13 13:24:32.953 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-10-13 13:24:32.971 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-10-13 13:24:33.056 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-10-13 13:26:12.354 [warning] vscode.json-language-features - Code actions of kind 'quickfix' requested but returned code action is of kind 'source.sort.json'. Code action will be dropped. Please check 'CodeActionContext.only' to only return requested code actions.

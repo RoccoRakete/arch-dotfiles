@@ -1,0 +1,43 @@
+* {
+  font-size: 1.03em;
+}
+
+window#HDMI-A-1 {
+    background-image: url("/tmp/HDMI-A-1.png");
+}
+
+window#eDP-1 {
+    background-image: url("/tmp/eDP-1.png");
+}
+
+#window-box {
+  margin-bottom: 350px;
+}
+
+#clock-label {
+  font-weight: bolder;
+  font-size: 6em;
+}
+
+#date-label {
+  font-weight: bolder;
+  font-size: 2em;
+  margin-bottom: 350px;
+}
+
+/* hide "Password:" label */
+#input-label {
+  font-size: 0;
+}
+
+#user-name {}
+
+#input-field {
+  font-size: 1.5em;
+}
+
+#warning-label,
+#error-label,
+#unlock-button {}
+
+#unlock-button {}
