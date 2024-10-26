@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "tokyodark",
+  theme = "catppuccin",
   transparency = true,
 
   -- hl_override = {
@@ -19,21 +19,25 @@ M.nvdash = {
   load_on_startup = true,
 
   header = {
-    "                                        ",
-    "    ███    ██ ██    ██ ██ ███    ███    ",
-    "    ████   ██ ██    ██ ██ ████  ████    ",
-    "    ██ ██  ██ ██    ██ ██ ██ ████ ██    ",
-    "    ██  ██ ██  ██  ██  ██ ██  ██  ██    ",
-    "    ██   ████   ████   ██ ██      ██    ",
-    "                                        ",
-    "                                        ",
-    "                                        ",
-    "           Powered By  eovim          ",
-    "                                        ",
+    "           ▄ ▄                   ",
+    "       ▄   ▄▄▄     ▄ ▄▄▄ ▄ ▄     ",
+    "       █ ▄ █▄█ ▄▄▄ █ █▄█ █ █     ",
+    "    ▄▄ █▄█▄▄▄█ █▄█▄█▄▄█▄▄█ █     ",
+    "  ▄ █▄▄█ ▄ ▄▄ ▄█ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄  ",
+    "  █▄▄▄▄ ▄▄▄ █ ▄ ▄▄▄ ▄ ▄▄▄ ▄ ▄ █ ▄",
+    "▄ █ █▄█ █▄█ █ █ █▄█ █ █▄█ ▄▄▄ █ █",
+    "█▄█ ▄ █▄▄█▄▄█ █ ▄▄█ █ ▄ █ █▄█▄█ █",
+    "    █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█ █▄█▄▄▄█    ",
+    "                                 ",
+    "                                 ",
+    "       Powered By  eovim       ",
+    "                                 ",
+    "                                 ",
   },
 
   buttons = {
     { txt = "  Find File", keys = "ff", cmd = "Telescope find_files" },
+    { txt = "  Find (hidden) File ", keys = "fa", cmd = "Telescope find_files --hidden" },
     { txt = "  Recent Files", keys = "fo", cmd = "Telescope oldfiles" },
     { txt = "󰈭  Find Word", keys = "fw", cmd = "Telescope live_grep" },
     { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" },
@@ -56,8 +60,18 @@ M.nvdash = {
 }
 
 M.cheatsheet = {
-  theme = "simple", -- simple/grid
+  theme = "grid", -- simple/grid
   excluded_groups = { "terminal (t)", "autopairs", "Nvim", "Opens" }, -- can add group name or with mode
+}
+
+M.lsp = { signature = false }
+
+M.ui = {
+  statusline = {
+    theme = "minimal",
+    separator_style = "round",
+  },
+  telescope = { style = "bordered" },
 }
 
 return M

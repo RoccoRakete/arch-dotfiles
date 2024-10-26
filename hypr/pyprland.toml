@@ -1,8 +1,0 @@
-[pyprland]
-plugins = [
-    "expose",
-    "gbar"
-]
-
-[gbar]
-monitors = ["HDMI-A-1", "eDP-1"]
