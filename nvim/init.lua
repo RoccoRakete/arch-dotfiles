@@ -1,26 +1,47 @@
--- This file simply bootstraps the installation of Lazy.nvim and then calls other files for execution
--- This file doesn't necessarily need to be touched, BE CAUTIOUS editing this file and proceed at your own risk.
-local lazypath = vim.env.LAZY or vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
-if not (vim.env.LAZY or (vim.uv or vim.loop).fs_stat(lazypath)) then
-  -- stylua: ignore
-  vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable",
-    lazypath })
+vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
+vim.g.mapleader = " "
+
+-- bootstrap lazy and all plugins
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+
+if not vim.uv.fs_stat(lazypath) then
+  local repo = "https://github.com/folke/lazy.nvim.git"
+  vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
 end
+
 vim.opt.rtp:prepend(lazypath)
 
--- validate that lazy is available
-if not pcall(require, "lazy") then
-  -- stylua: ignore
-  vim.api.nvim_echo(
-    { { ("Unable to load lazy from: %s\n"):format(lazypath), "ErrorMsg" }, { "Press any key to exit...", "MoreMsg" } },
-    true, {})
-  vim.fn.getchar()
-  vim.cmd.quit()
+local lazy_config = require "configs.lazy"
+
+-- load plugins
+require("lazy").setup({
+  {
+    "NvChad/NvChad",
+    lazy = false,
+    branch = "v2.5",
+    import = "nvchad.plugins",
+  },
+
+  { import = "plugins" },
+}, lazy_config)
+
+-- load theme
+dofile(vim.g.base46_cache .. "defaults")
+dofile(vim.g.base46_cache .. "statusline")
+
+require "options"
+require "nvchad.autocmds"
+
+vim.schedule(function()
+  require "mappings"
+end)
+
+if vim.g.neovide then
+  vim.o.guifont = "Hurmit Nerd Font:h12"
+  vim.g.neovide_padding_top = 20
+  vim.api.nvim_set_keymap("n", "<C-S-v>", '"+p', { noremap = true, silent = true })
+  vim.api.nvim_set_keymap("i", "<C-S-v>", "<C-r>+", { noremap = true, silent = true })
+  vim.api.nvim_set_keymap("v", "<C-S-v>", '"+p', { noremap = true, silent = true })
+  vim.api.nvim_set_keymap("n", "<C-S-c>", '"+yy', { noremap = true, silent = true })
+  vim.api.nvim_set_keymap("v", "<C-S-c>", '"+y', { noremap = true, silent = true })
 end
-
-vim.filetype.add {
-  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
-}
-
-require "lazy_setup"
-require "polish"
