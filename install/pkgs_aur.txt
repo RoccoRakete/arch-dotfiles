@@ -25,6 +25,5 @@ swaync-git
 syncthing-gtk
 syspower
 xdg-desktop-portal-hyprland-git
-yay
 zen-browser-bin
 zsh-theme-powerlevel10k

@@ -122,7 +122,7 @@ install_yay() {
     echo "yay is not installed."
     if prompt_yes_no "Do you want to install yay?"; then
       echo "Installing yay..."
-      sudo pacman -S --needed git base-devel &&
+      sudo pacman -S --needed --noconfirm git base-devel &&
         git clone https://aur.archlinux.org/yay-bin.git &&
         cd yay-bin &&
         makepkg -si &&
@@ -161,7 +161,7 @@ install_yay_pkgs() {
   else
     if prompt_yes_no "Do you want to proceed with the installation?"; then
       echo "Installing packages from $AUR_PKG_FILE..."
-      yay -S --needed - <"$AUR_PKG_FILE"
+      yay -S --noconfirm - <"$AUR_PKG_FILE"
     else
       echo "AUR package installation canceled."
       exit
@@ -441,6 +441,14 @@ echo "###### Change default shell ######"
 echo "##################################"
 echo " "
 set_shell
+
+# Enable Services
+echo ""
+echo "#############################"
+echo "###### Enable Services ######"
+echo "#############################"
+echo " "
+fn_services
 
 # Finish Installation
 echo ""
