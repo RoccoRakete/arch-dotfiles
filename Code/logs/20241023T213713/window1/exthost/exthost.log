@@ -1,6 +1,0 @@
-2024-10-23 21:37:16.231 [info] Extension host with pid 108717 started
-2024-10-23 21:37:16.231 [info] Skipping acquiring lock for /home/martin/.config/Code/User/workspaceStorage/8c0231f4d00189c2a131f4b3596659d1.
-2024-10-23 21:37:16.658 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
-2024-10-23 21:37:16.688 [info] ExtensionService#_doActivateExtension foxundermoon.shell-format, startup: false, activationEvent: 'onLanguage:shellscript'
-2024-10-23 21:37:16.871 [info] Extension host terminating: renderer closed the MessagePort
-2024-10-23 21:37:16.877 [info] Extension host with pid 108717 exiting with code 0

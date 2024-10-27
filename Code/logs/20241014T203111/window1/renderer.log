@@ -1,8 +1,0 @@
-2024-10-14 20:31:11.746 [info] Started local extension host with pid 22542.
-2024-10-14 20:31:12.144 [warning] Overwriting /home/martin/.vscode/extensions/fireblast.hyprlang-vscode-0.0.1 with Workspace Extension /home/martin/.vscode/extensions/fireblast.hyprlang-vscode-0.0.1.
-2024-10-14 20:31:29.436 [info] [perf] Render performance baseline is 26ms
-2024-10-14 20:31:42.683 [info] Uninstalling the workspace extension ewen-lbh.vscode-hyprls from file:///home/martin/.vscode/extensions/ewen-lbh.vscode-hyprls-0.2.0
-2024-10-14 20:31:42.691 [info] Successfully uninstalled the workspace extension ewen-lbh.vscode-hyprls from file:///home/martin/.vscode/extensions/ewen-lbh.vscode-hyprls-0.2.0
-2024-10-14 20:31:45.448 [info] Started local extension host with pid 22836.
-2024-10-14 20:34:11.158 [info] Installing the extension ewen-lbh.vscode-hyprls from file:///home/martin/.vscode/extensions/ewen-lbh.vscode-hyprls-0.2.0 in workspace
-2024-10-14 20:34:11.220 [info] Successfully installed the extension ewen-lbh.vscode-hyprls from file:///home/martin/.vscode/extensions/ewen-lbh.vscode-hyprls-0.2.0 in the workspace

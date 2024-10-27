@@ -1,6 +1,0 @@
-2024-10-14 18:51:37.178 [info] Started local extension host with pid 2603.
-2024-10-14 18:51:37.539 [warning] Overwriting /home/martin/.vscode/extensions/fireblast.hyprlang-vscode-0.0.1 with Workspace Extension /home/martin/.vscode/extensions/fireblast.hyprlang-vscode-0.0.1.
-2024-10-14 18:51:40.174 [info] [perf] Render performance baseline is 54ms
-2024-10-14 19:12:19.031 [warning] No search provider registered for scheme: file, waiting
-2024-10-14 19:12:19.066 [info] Started local extension host with pid 6437.
-2024-10-14 19:12:25.886 [info] Not activating extension 'rust-lang.rust-analyzer': Timed out while searching for 'workspaceContains' pattern */Cargo.toml,*/rust-project.json,*/.rust-project.json
