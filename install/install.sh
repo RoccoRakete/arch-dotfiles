@@ -267,11 +267,9 @@ copy_dots() {
     done
 
     # Copy .zshrc to ~
-    for file in "$SORCE_DIR"/*; do
-      if [ -f "$file" ]; then
-        cp "$file" ~/
-      fi
-    done
+    if [ -f "$SORCE_DIR/.zshrc" ]; then
+      cp "$SORCE_DIR/.zshrc" ~/
+    fi
   else
     echo "Dotfiles not copied!"
     exit
