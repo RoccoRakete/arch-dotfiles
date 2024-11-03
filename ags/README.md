@@ -17,6 +17,8 @@ A panel built for Hyprland with [AGS](https://github.com/Aylur/ags)
 ![HyprPanel1](./assets/hp1.png)
 ![HyprPanel2](./assets/hp2.png)
 
+> NOTE: If you would like to support the project, please instead [donate to Aylur](https://ko-fi.com/aylur) who put in tremendous effort to build AGS. Hyprpanel likely wouldn't exist without it.
+
 ## Installation
 
 The [HyprPanel Wiki](https://hyprpanel.com/getting_started/installation.html) contains in depth instructions for installing the panel and all of its dependencies. The instructions below are general instructions for installing the panel.
@@ -30,27 +32,37 @@ curl -fsSL https://bun.sh/install | bash && \
   sudo ln -s $HOME/.bun/bin/bun /usr/local/bin/bun
 ```
 
-Additional dependencies:
+### Required
 
 ```sh
 pipewire
+
+## Resource monitoring modules
 libgtop
+
+## Bluetooth menu utilities
 bluez
 bluez-utils
-grimblast
-gpu-screen-recorder
-hyprpicker
-btop
-networkmanager
-matugen
+
+## Copy/Paste utilities
 wl-clipboard
-swww
+
+## Compiler for sass/scss
 dart-sass
+
+## Brightness module for OSD
 brightnessctl
+
+## AGS requirements
+networkmanager
 gnome-bluetooth-3.0
 ```
 
-Optional Dependencies:
+::: warning
+HyprPanel will not run without the required dependencies.
+:::
+
+### Optional
 
 ```sh
 ## Used for Tracking GPU Usage in your Dashboard (NVidia only)
@@ -63,8 +75,26 @@ pywal
 ## To check for pacman updates in the default script used in the updates module
 pacman-contrib
 
-## To switch between power profiles in battery module
+## To switch between power profiles in the battery module
 power-profiles-daemon
+
+## To take snapshots with the default snapshot shortcut in the dashboard
+grimblast
+
+## To record screen through the dashboard record shortcut
+gpu-screen-recorder
+
+## To enable the eyedropper color picker with the default snapshot shortcut in the dashboard
+hyprpicker
+
+## To click resource/stat bars in the dashboard and open btop
+btop
+
+## To enable matugen based color theming
+matugen
+
+## To enable matugen based color theming and setting wallpapers
+swww
 ```
 
 ### Arch
@@ -72,7 +102,7 @@ power-profiles-daemon
 pacman:
 
 ```bash
-sudo pacman -S pipewire libgtop bluez bluez-utils btop networkmanager dart-sass wl-clipboard brightnessctl swww python gnome-bluetooth-3.0 pacman-contrib power-profiles-daemon
+sudo pacman -S pipewire libgtop bluez bluez-utils btop networkmanager dart-sass wl-clipboard brightnessctl swww python gnome-bluetooth-3.0 pacman-contrib power-profiles-daemon gvfs
 ```
 
 AUR:
