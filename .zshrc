@@ -77,6 +77,7 @@ alias vim="nvim"
 alias rm="rm -i"
 alias ll="eza -loah --icons=always --no-permissions --git"
 alias fwup="sudo fwupdmgr refresh --force && sudo fwupdmgr get-updates && sudo fwupdmgr update"
+alias pushd="cd ~/.dots && git add -A && git commit -a && git push cd -"
 
 # ENV Variables
 export TERM=kitty
