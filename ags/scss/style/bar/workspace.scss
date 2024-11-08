@@ -18,7 +18,7 @@
     &.active {
       color: if($bar-buttons-monochrome, $bar-buttons-icon, $bar-buttons-workspaces-active);
       background-color: if($bar-buttons-monochrome, $bar-buttons-icon, $bar-buttons-workspaces-active);
-      min-width: 10em;
+      min-width: 11em;
       min-height: 5em;
     }
 
