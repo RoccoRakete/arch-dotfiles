@@ -14,8 +14,7 @@
     "*": {
       "left": [
         "dashboard",
-        "workspaces",
-        "media"
+        "workspaces"
       ],
       "middle": [
         "clock"
@@ -47,7 +46,7 @@
   "theme.bar.buttons.spacing": "0.2em",
   "theme.bar.buttons.padding_y": "0rem",
   "theme.bar.buttons.padding_x": "0.5rem",
-  "bar.clock.format": "%a %d. %b %H:%M",
+  "bar.clock.format": "%a. %d. %b %H:%M",
   "bar.clock.icon": "1",
   "theme.bar.buttons.clock.enableBorder": false,
   "bar.clock.showIcon": false,
@@ -70,7 +69,7 @@
   "theme.osd.margins": "0px 0px 50px 0px",
   "theme.osd.monitor": 0,
   "theme.osd.active_monitor": true,
-  "menus.dashboard.stats.enabled": false,
+  "menus.dashboard.stats.enabled": true,
   "bar.customModules.ram.icon": "",
   "bar.customModules.ram.label": true,
   "bar.customModules.ram.labelType": "used",
@@ -91,7 +90,7 @@
   "menus.dashboard.directories.right.directory2.command": "bash -c \"thunar $HOME/Pictures/\"",
   "menus.dashboard.directories.right.directory3.command": "bash -c \"thunar $HOME/\"",
   "menus.dashboard.directories.left.directory3.command": "bash -c \"thunar $HOME/code/\"",
-  "bar.network.truncation_size": 4,
+  "bar.network.truncation_size": 3,
   "bar.network.truncation": false,
   "wallpaper.image": "/home/martin/.config/backgrounds/DisneyWorld.jpg",
   "theme.bar.transparent": false,
@@ -120,11 +119,31 @@
   "theme.bar.buttons.radius": "0.3em",
   "bar.media.middleClick": "pkill spotify",
   "menus.clock.weather.enabled": true,
-  "theme.bar.buttons.modules.ram.spacing": "0.3em",
-  "theme.bar.buttons.modules.cpu.spacing": "0.3em",
-  "theme.bar.buttons.modules.weather.spacing": "0.25em",
+  "theme.bar.buttons.modules.ram.spacing": "0.4em",
+  "theme.bar.buttons.modules.cpu.spacing": "0.4em",
+  "theme.bar.buttons.modules.weather.spacing": "0.4em",
   "theme.matugen_settings.mode": "dark",
   "theme.matugen_settings.scheme_type": "tonal-spot",
   "theme.matugen_settings.variation": "standard_1",
-  "theme.bar.buttons.network.spacing": "0.35em"
+  "theme.bar.buttons.network.spacing": "0.4em",
+  "menus.dashboard.stats.enable_gpu": false,
+  "menus.transitionTime": 100,
+  "menus.transition": "crossfade",
+  "theme.bar.buttons.modules.updates.spacing": "0.4em",
+  "bar.customModules.updates.padZero": false,
+  "theme.bar.buttons.modules.updates.enableBorder": false,
+  "bar.customModules.updates.label": true,
+  "theme.bar.buttons.bluetooth.spacing": "0.5em",
+  "theme.bar.buttons.battery.spacing": "0.5em",
+  "bar.windowtitle.truncation_size": 50,
+  "theme.bar.buttons.modules.storage.spacing": "0.4em",
+  "theme.bar.buttons.modules.netstat.spacing": "0.4em",
+  "theme.bar.buttons.modules.kbLayout.spacing": "0.4em",
+  "theme.bar.buttons.modules.submap.spacing": "0.4em",
+  "theme.bar.buttons.modules.power.spacing": "0.4em",
+  "theme.bar.buttons.volume.spacing": "0.4em",
+  "terminal": "kitty",
+  "theme.bar.menus.popover.scaling": 80,
+  "theme.tooltip.scaling": 80,
+  "theme.bar.border.location": "none"
 }

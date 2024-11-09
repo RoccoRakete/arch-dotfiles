@@ -1,0 +1,39 @@
+#syspower {
+  background: #070707F2;
+}
+
+#syspower .primary_window {}
+
+#syspower .empty_window {}
+
+#syspower .box_layout {}
+
+#syspower .label_status {}
+
+#syspower .box_buttons {}
+
+#syspower .progressbar_status {}
+
+#syspower .button_shutdown {
+  background: #171717;
+  border-radius: 25px;
+  color: #e01b24;
+}
+
+#syspower .button_reboot {
+  background: #171717;
+  border-radius: 25px;
+  color: #33d17a;
+}
+
+#syspower .button_logout {
+  background: #171717;
+  border-radius: 25px;
+  color: #ff7800;
+}
+
+#syspower .button_cancel {
+  background: #171717;
+  border-radius: 25px;
+  color: #3584e4;
+}
