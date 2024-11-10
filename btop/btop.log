@@ -87,3 +87,6 @@
 2024/11/08 (23:14:21) | ===> btop++ v.1.4.0
 2024/11/08 (23:14:21) | WARNING: Intel GPU: Failed to initialize PMU
 >>>>>>> c6748ae0ce22adedcdcf45d3eef4140387b4dc70
+
+2024/11/10 (09:52:09) | ===> btop++ v.1.4.0
+2024/11/10 (09:52:09) | WARNING: Intel GPU: Failed to initialize PMU
