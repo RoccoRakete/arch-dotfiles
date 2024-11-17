@@ -1,0 +1,53 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+command=$SCRIPT_DIR/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[battery]
+command=./battery/battery
+interval=30
+LABEL= 󰄌  
+
+[volume-pipewire]
+command=./volume-pipewire/volume-pipewire
+interval=persist
+SUBSCRIBE=1
+USE_ALSA_NAME=0
+
+[backlight]
+command=./backlight/backlight
+
+# Date Time
+[time]
+command=date '+%d.%m.'
+interval=5
+
+[time]
+command=date '+%H:%M'
+interval=5
