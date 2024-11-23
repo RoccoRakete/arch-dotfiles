@@ -1,3 +1,2 @@
 bufferline zurücktab
-remap :
 git?
