@@ -94,6 +94,7 @@ return {
 			end, { desc = "Format file or range (in visual mode)" })
 		end,
 	},
+	-- none-ls
 	{
 		"nvimtools/none-ls.nvim",
 		config = function()
@@ -107,5 +108,26 @@ return {
 
 			vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 		end,
+	},
+	{
+		-- 	"hrsh7th/cmp-path",
+		-- 	config = function()
+		-- 		local cmp = require("cmp-path")
+		-- 		require("cmp").setup({
+		-- 			sources = {
+		-- 				{ name = "path" },
+		-- 			},
+		-- 		})
+		-- 		cmp.setup({
+		-- 			sources = {
+		-- 				{
+		-- 					name = "path",
+		-- 					option = {
+		-- 						-- Options go into this table
+		-- 					},
+		-- 				},
+		-- 			},
+		-- 		})
+		-- 	end,
 	},
 }

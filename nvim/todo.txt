@@ -1,2 +1,5 @@
 bufferline zurücktab
-git?
+lualine git status hübsch
+neotree git > typecraft
+git? https://www.youtube.com/watch?v=zOQMwWqdp9w
+pfade
