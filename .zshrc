@@ -83,6 +83,7 @@ alias pushd="cd ~/.dots && git add -A && git commit -a && git push && cd -"
 # ENV Variables
 export TERM=kitty
 export EDITOR=nvim
+export MANPAGER='nvim +Man!'
 
 # Shell integrations
 eval "$(fzf --zsh)"
