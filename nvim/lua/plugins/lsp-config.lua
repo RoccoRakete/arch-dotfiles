@@ -6,6 +6,7 @@ return {
 			require("mason").setup({
 				ensure_installed = {
 					"prettier",
+					"tflint",
 				},
 			})
 		end,
@@ -27,6 +28,7 @@ return {
 					"pylyzer",
 					"rust_analyzer",
 					"yamlls",
+					"terraformls",
 				},
 			})
 		end,
@@ -34,9 +36,22 @@ return {
 	-- nvim-lspconfig
 	{
 		"neovim/nvim-lspconfig",
+
 		config = function()
 			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local tf_capb = vim.lsp.protocol.make_client_capabilities()
+			tf_capb.textDocument.completion.completionItem.snippetSupport = true
+
+			lspconfig.terraformls.setup({
+				filetypes = { "terraform", "terraform-vars", "tf" },
+				root_dir = function(dirpath) end,
+			})
+
+			lspconfig.terraformls.setup({
+				flags = { debounce_text_changes = 150 },
+				capabilities = tf_capb,
+			})
 
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
@@ -77,6 +92,10 @@ return {
 					python = { "isort", "black" },
 					sh = { "shfmt" },
 					rust = { "rustfmt" },
+					hcl = { "packer_fmt" },
+					terraform = { "terraform_fmt" },
+					tf = { "terraform_fmt" },
+					["terraform-vars"] = { "terraform_fmt" },
 				},
 				format_on_save = {
 					lsp_fallback = true,
@@ -97,12 +116,16 @@ return {
 	-- none-ls
 	{
 		"nvimtools/none-ls.nvim",
+
 		config = function()
 			local null_ls = require("null-ls")
 			null_ls.setup({
 				sources = {
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.prettier,
+					null_ls.builtins.formatting.packer,
+					null_ls.builtins.formatting.terraform_fmt,
+					-- null_ls.builtins.diagnostics.terraform_validate,
 				},
 			})
 

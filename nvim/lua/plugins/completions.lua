@@ -40,12 +40,21 @@ return {
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" }, -- For luasnip users.
 					{ name = "async_path" },
+					{ name = "terraform-ls" },
 					-- { name = "path" },
 				},
 				{
 					{ name = "buffer" },
 				},
 			})
+		end,
+	},
+	{
+		"L3MON4D3/LuaSnip",
+		dependencies = { "rafamadriz/friendly-snippets" },
+		config = function()
+			require("luasnip").filetype_extend("terraform", { "terraform-ls" })
+			require("luasnip.loaders.from_vscode").lazy_load()
 		end,
 	},
 }

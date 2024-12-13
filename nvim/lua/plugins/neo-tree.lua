@@ -22,6 +22,8 @@ return {
 				},
 			},
 
+			popup_border_style = "rounded",
+
 			git_status = {
 				symbols = {
 					-- Change type

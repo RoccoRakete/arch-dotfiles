@@ -11,6 +11,8 @@ return {
 				"typescript",
 				"javascript",
 				"python",
+				"terraform",
+				"hcl",
 			},
 			highlight = { enable = true },
 			indent = { enable = true },

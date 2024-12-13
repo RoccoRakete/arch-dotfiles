@@ -8,3 +8,5 @@ vim.cmd("set termguicolors")
 
 vim.cmd("set fillchars+=vert:\\▏")
 vim.cmd("set fillchars+=horiz:\\▁")
+
+vim.opt.undofile = true
