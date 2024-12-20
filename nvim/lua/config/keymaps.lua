@@ -9,3 +9,7 @@ vim.keymap.set("n", "<leader>fg", "<CMD>Telescope live_grep<NL>")
 vim.keymap.set("n", "<leader>fb", "<CMD>Telescope buffers<NL>")
 vim.keymap.set("n", "<leader>fh", "<CMD>Telescope help_tags<NL>")
 vim.keymap.set("n", "<leader>fss", "<CMD>:SessionSearch<NL>")
+
+-- Copy to Systemclipboard using CTRL+SHIFT+C / CTRL+C
+vim.keymap.set({ "n", "x" }, "<C-S-c>", '"+y')
+vim.keymap.set({ "n", "x" }, "<C-c>", '"+y')
