@@ -65,6 +65,25 @@ return {
 				capabilities = capabilities,
 			})
 
+			lspconfig.gopls.setup({
+				cmd = { "gopls" },
+				on_attach = on_attach,
+				capabilities = capabilities,
+				settings = {
+					gopls = {
+						experimentalPostfixCompletions = true,
+						analyses = {
+							unusedparams = true,
+							shadow = true,
+						},
+						staticcheck = true,
+					},
+				},
+				init_options = {
+					usePlaceholders = true,
+				},
+			})
+
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, {})
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})

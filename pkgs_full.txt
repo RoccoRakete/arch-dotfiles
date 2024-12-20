@@ -1,7 +1,5 @@
 acpi
 adw-gtk-theme
-agsv1
-agsv1-debug
 alpaca-ai
 arch-gaming-meta
 avizo-git
@@ -58,7 +56,6 @@ gnome-software
 golangci-lint-bin
 golangci-lint-langserver-bin
 gopls
-gpu-screen-recorder-git
 grim
 gst-plugin-pipewire
 gst-plugins-good
@@ -171,7 +168,6 @@ slurp
 smartmontools
 sof-firmware
 solaar-git
-spotify
 starship
 stylua
 sway-audio-idle-inhibit-git
@@ -266,7 +262,6 @@ winetricks
 wireless_tools
 wireplumber
 wl-clipboard
-wlogout
 wofi
 xdg-desktop-portal-hyprland-git
 xdg-utils
@@ -277,8 +272,6 @@ xf86-video-vmware
 xfce4-settings
 xorg-server
 xorg-xinit
-yay
-yay-debug
 yazi
 zen-browser-avx2-bin
 zoxide
@@ -287,4 +280,3 @@ zsh
 zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
-zsh-theme-powerlevel10k

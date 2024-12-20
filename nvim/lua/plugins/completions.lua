@@ -41,6 +41,7 @@ return {
 					{ name = "luasnip" }, -- For luasnip users.
 					{ name = "async_path" },
 					{ name = "terraform-ls" },
+					{ name = "gopls" },
 					-- { name = "path" },
 				},
 				{
