@@ -1,0 +1,9 @@
+profile home_office {
+  output "AOC Q27B3MA 17ZQ7HA002194"
+  output "eDP-1" disable
+}
+
+profile undocked {
+  output "eDP-1" enable
+}
+
