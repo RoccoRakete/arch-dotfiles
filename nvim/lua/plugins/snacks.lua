@@ -4,7 +4,13 @@ return {
 	lazy = false,
 	---@type snacks.Config
 	opts = {
-		bigfile = { enabled = true },
+		bigfile = {
+			enabled = true,
+		},
+		scroll = {
+			enabled = true,
+			duration = { step = 15, total = 250 },
+		},
 		dashboard = {
 			enabled = true,
 			preset = {

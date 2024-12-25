@@ -3,6 +3,11 @@ profile home_office {
   output "eDP-1" disable
 }
 
+profile home_TV {
+  output "LG Electronics LG TV SSCR2 0x01010101"
+  output "eDP-1" disable
+}
+
 profile undocked {
   output "eDP-1" enable
 }

@@ -34,61 +34,93 @@ return {
 		end,
 	},
 	-- nvim-lspconfig
+
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = { "saghen/blink.cmp" },
 
-		config = function()
+		-- example using `opts` for defining servers
+		opts = {
+			servers = {
+				lua_ls = {},
+				clangd = {},
+				terraformls = {},
+				gopls = {},
+				bashls = {},
+				cssls = {},
+				jsonls = {},
+				pylyzer = {},
+				rust_analyzer = {},
+				ts_ls = {},
+				yamlls = {},
+			},
+		},
+		config = function(_, opts)
 			local lspconfig = require("lspconfig")
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			local tf_capb = vim.lsp.protocol.make_client_capabilities()
-			tf_capb.textDocument.completion.completionItem.snippetSupport = true
-
-			lspconfig.terraformls.setup({
-				filetypes = { "terraform", "terraform-vars", "tf" },
-				root_dir = function(dirpath) end,
-			})
-
-			lspconfig.terraformls.setup({
-				flags = { debounce_text_changes = 150 },
-				capabilities = tf_capb,
-			})
-
-			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-			})
-
-			lspconfig.cssls.setup({
-				capabilities = capabilities,
-			})
-
-			lspconfig.rust_analyzer.setup({
-				capabilities = capabilities,
-			})
-
-			lspconfig.gopls.setup({
-				cmd = { "gopls" },
-				on_attach = on_attach,
-				capabilities = capabilities,
-				settings = {
-					gopls = {
-						experimentalPostfixCompletions = true,
-						analyses = {
-							unusedparams = true,
-							shadow = true,
-						},
-						staticcheck = true,
-					},
-				},
-				init_options = {
-					usePlaceholders = true,
-				},
-			})
-
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, {})
-			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+			for server, config in pairs(opts.servers) do
+				-- passing config.capabilities to blink.cmp merges with the capabilities in your
+				-- `opts[server].capabilities, if you've defined it
+				config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
+				lspconfig[server].setup(config)
+			end
 		end,
 	},
+
+	-- {
+	-- 	"neovim/nvim-lspconfig",
+	--
+	-- 	config = function()
+	-- 		local lspconfig = require("lspconfig")
+	-- 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
+	-- 		local tf_capb = vim.lsp.protocol.make_client_capabilities()
+	-- 		tf_capb.textDocument.completion.completionItem.snippetSupport = true
+	--
+	-- 		lspconfig.terraformls.setup({
+	-- 			filetypes = { "terraform", "terraform-vars", "tf" },
+	-- 			root_dir = function(dirpath) end,
+	-- 		})
+	--
+	-- 		lspconfig.terraformls.setup({
+	-- 			flags = { debounce_text_changes = 150 },
+	-- 			capabilities = tf_capb,
+	-- 		})
+	--
+	-- 		lspconfig.lua_ls.setup({
+	-- 			capabilities = capabilities,
+	-- 		})
+	--
+	-- 		lspconfig.cssls.setup({
+	-- 			capabilities = capabilities,
+	-- 		})
+	--
+	-- 		lspconfig.rust_analyzer.setup({
+	-- 			capabilities = capabilities,
+	-- 		})
+	--
+	-- 		lspconfig.gopls.setup({
+	-- 			cmd = { "gopls" },
+	-- 			on_attach = on_attach,
+	-- 			capabilities = capabilities,
+	-- 			settings = {
+	-- 				gopls = {
+	-- 					experimentalPostfixCompletions = true,
+	-- 					analyses = {
+	-- 						unusedparams = true,
+	-- 						shadow = true,
+	-- 					},
+	-- 					staticcheck = true,
+	-- 				},
+	-- 			},
+	-- 			init_options = {
+	-- 				usePlaceholders = true,
+	-- 			},
+	-- 		})
+	--
+	-- 		vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+	-- 		vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, {})
+	-- 		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+	-- 	end,
+	-- },
 	-- Conform
 	{
 		"stevearc/conform.nvim",
