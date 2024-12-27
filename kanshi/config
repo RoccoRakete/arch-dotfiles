@@ -8,6 +8,11 @@ profile home_TV {
   output "eDP-1" disable
 }
 
+profile Eltern_TV {
+  output "Samsung Electric Company SAMSUNG 0x01000E00"
+  output "eDP-1" disable
+}
+
 profile undocked {
   output "eDP-1" enable
 }

@@ -501,5 +501,7 @@
   "theme.bar.buttons.workspaces.smartHighlight": true,
   "bar.workspaces.showWsIcons": false,
   "bar.workspaces.showApplicationIcons": false,
-  "menus.volume.raiseMaximumVolume": false
+  "menus.volume.raiseMaximumVolume": false,
+  "menus.power.lowBatteryNotification": true,
+  "menus.power.lowBatteryThreshold": 10
 }

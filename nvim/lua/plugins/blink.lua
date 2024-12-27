@@ -28,7 +28,7 @@ return {
 		},
 		completion = {
 			menu = {
-				border = "single",
+				border = "rounded",
 				auto_show = function(ctx)
 					return ctx.mode ~= "cmdline"
 				end,
@@ -38,10 +38,11 @@ return {
 			},
 			documentation = {
 				window = {
-					border = "single",
+					border = "rounded",
 				},
 				auto_show = true,
 				auto_show_delay_ms = 500,
+				treesitter_highlighting = true,
 			},
 		},
 		signature = {
