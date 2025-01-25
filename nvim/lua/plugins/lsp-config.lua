@@ -23,7 +23,6 @@ return {
 					"cssls",
 					"gopls",
 					"ts_ls",
-					"jsonls",
 					"markdown_oxide",
 					"pylyzer",
 					"rust_analyzer",
@@ -48,11 +47,11 @@ return {
 				gopls = {},
 				bashls = {},
 				cssls = {},
-				jsonls = {},
 				pylyzer = {},
 				rust_analyzer = {},
 				ts_ls = {},
 				yamlls = {},
+				sourcekit = {},
 			},
 		},
 		config = function(_, opts)
@@ -63,6 +62,15 @@ return {
 				config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
 				lspconfig[server].setup(config)
 			end
+			lspconfig.sourcekit.setup({
+				capabilities = {
+					workspace = {
+						didChangeWatchedFiles = {
+							dynamicRegistration = true,
+						},
+					},
+				},
+			})
 		end,
 	},
 
@@ -132,11 +140,11 @@ return {
 				formatters_by_ft = {
 					javascript = { "prettier" },
 					typescript = { "prettier" },
+					html = { "htmlbeautifier" },
 					javascriptreact = { "prettier" },
 					typescriptreact = { "prettier" },
 					css = { "prettier" },
 					scss = { "prettierd" },
-					json = { "prettier" },
 					yaml = { "prettier" },
 					markdown = { "prettier" },
 					lua = { "stylua" },
@@ -176,6 +184,7 @@ return {
 					null_ls.builtins.formatting.prettier,
 					null_ls.builtins.formatting.packer,
 					null_ls.builtins.formatting.terraform_fmt,
+					null_ls.builtins.formatting.htmlbeautifier,
 					-- null_ls.builtins.diagnostics.terraform_validate,
 				},
 			})

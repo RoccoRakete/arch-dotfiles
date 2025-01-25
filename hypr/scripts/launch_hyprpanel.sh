@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-pkill gjs
+hyprpanel -q
 
 # Launch hyprpanel
-echo "---" | tee -a /tmp/hyprpanel/hyprpanel.log
-hyprpanel 2>&1 | tee -a /tmp/hyprpanel/hyprpanel.log &
+hyprpanel &
 disown
 
 echo "shell launched..."

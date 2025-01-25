@@ -1,9 +1,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -76,6 +76,7 @@ alias vi="nvim"
 alias vim="nvim"
 alias rm="rm -i"
 alias ll="eza -loah --icons=always --no-permissions --git"
+alias cat="bat"
 alias sedit="sudoedit"
 alias fwup="sudo fwupdmgr refresh --force && sudo fwupdmgr get-updates && sudo fwupdmgr update"
 alias pushd="cd ~/.dots && git add -A && git commit -a && git push && cd -"
@@ -84,6 +85,8 @@ alias pushd="cd ~/.dots && git add -A && git commit -a && git push && cd -"
 export TERM=kitty
 export EDITOR=nvim
 export MANPAGER='nvim +Man!'
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/go/bin
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -92,5 +95,5 @@ eval "$(zoxide init --cmd cd zsh)"
 bindkey "^[[3~" delete-char
 bindkey '^[[A' fzf-history-widget
 
-clear
+# clear
 nerdfetch

@@ -20,6 +20,7 @@ return {
 				"sql",
 				"gotmpl",
 				"json",
+				"jsonc",
 				"comment",
 			},
 			highlight = { enable = true },
